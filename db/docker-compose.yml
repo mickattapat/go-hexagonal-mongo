@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  mymongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - config_db:/data/configdb
+      - db:/data/db
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379 # ports default redis
+    volumes:
+      - ./data/redis:/data
+      - ../config/redis.conf:/redis.conf
+    command: redis-server /redis.conf # redis-server : start /redis.conf
+
+
+volumes:
+  config_db:
+  db:
