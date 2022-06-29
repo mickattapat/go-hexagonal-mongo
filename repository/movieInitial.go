@@ -3,7 +3,7 @@ package repository
 import "go.mongodb.org/mongo-driver/bson/primitive"
 
 type Movie struct {
-	ID          primitive.ObjectID `json:"_id" bson:"_id"`
+	ID          primitive.ObjectID `json:"id,omitempty" bson:"_id,omitempty"`
 	ImdbID      int                `json:"imdbID" bson:"imdbID"`
 	Title       string             `json:"title"`
 	Year        int                `json:"year" bson:"year"`

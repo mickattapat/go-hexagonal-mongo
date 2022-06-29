@@ -70,10 +70,8 @@ func (r movieRepositoryDB) GetAll() ([]Movie, error) {
 
 	err = contactCursor.All(ctx, &movie)
 	if err != nil {
-		fmt.Println("test")
 		return nil, err
 	}
-	// fmt.Println(movie)
 
 	return movie, nil
 }

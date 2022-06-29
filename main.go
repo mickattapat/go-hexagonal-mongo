@@ -29,8 +29,8 @@ func main() {
 	// repo
 	movieRepository := repository.NewMovieRepositoryDB(db)
 	// service
-	movieService := service.NewMovieService(movieRepository)
-	// movieService := service.NewMovieServiceRedis(movieRepository, redisClient)
+	// movieService := service.NewMovieService(movieRepository)
+	movieService := service.NewMovieServiceRedis(movieRepository, redisClient)
 	// handler
 	movieHandler := handler.NewMovieHandler(movieService)
 
