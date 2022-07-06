@@ -8,5 +8,3 @@ learning simple golang hexagonal architecture with fiber and mongodb
 - redis 📑    https://github.com/go-redis/redis (github.com/go-redis/redis/v8)
 
 coached by code-bangkok , channarong (udemy)
-
-thx. 😄
